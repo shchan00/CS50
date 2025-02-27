@@ -1,0 +1,21 @@
+10 hmtl:
+<div>
+<i>
+<button>
+<a>
+<h1>
+<u1>
+<li>
+<aside>
+<image>
+<iframe>
+
+5 css:
+text-allign
+width
+height
+margin
+color
+
+Bootstrap: A cool sidebar
+Javascript: Expanding and collapsing the cool sidebar
