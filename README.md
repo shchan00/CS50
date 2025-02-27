@@ -2,6 +2,7 @@
 Homeworks from CS50x and CS50AI. The purpose of the repository is to store relevant work. Please do not directly copy.
 
 [General Information of CS50](https://pll.harvard.edu/course/cs50-introduction-computer-science)
+
 [General Information of CS50AI](https://pll.harvard.edu/course/cs50s-introduction-artificial-intelligence-python)
 
 ## The following is the topics involved in the problem sets:
