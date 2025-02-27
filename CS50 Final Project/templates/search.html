@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Search Result
+{% endblock %}
+
+{% block main %}
+<div class="mb-3">
+    <label for="sourceFilter" class="form-label">Filter by Source:</label>
+    <select id="sourceFilter" class="form-select">
+        <option value="">All Sources</option>
+        <option value="jalan">Jalan</option>
+        <option value="booking.com">Booking.com</option>
+    </select>
+</div>
+
+<table id="hotelTable" class="table table-striped">
+    <thead>
+        <tr>
+            <th class="text-start">Hotel Name</th>
+            <th class="text-end">Location</th>
+            <th class="text-end">Price (USD)</th>
+            <th class="text-end">Rating</th>
+            <th class="text-end">Source</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for hotel in hotels %}
+        <tr data-source="{{ hotel.source }}">
+            <td class="text-start"><a href="{{ hotel.href }}">{{ hotel.name }}</a></td>
+            <td class="text-end">{{ hotel.location }}</td>
+            <td class="text-end">${{ hotel.price_usd }}</td>
+            <td class="text-end">{{ hotel.ratings }}</td>
+            <td class="text-end">{{ hotel.source }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<script>
+    const sourceFilter = document.getElementById('sourceFilter');
+    const hotelTable = document.getElementById('hotelTable').getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+    
+    sourceFilter.addEventListener('change', function() {
+        const selectedSource = sourceFilter.value;
+        
+        for (let row of hotelTable) {
+            if (selectedSource === '' || row.getAttribute('data-source') === selectedSource) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        }
+    });
+</script>
+{% endblock %}

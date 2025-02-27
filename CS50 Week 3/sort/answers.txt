@@ -1,0 +1,12 @@
+sort1 uses: Bubble Sort
+
+How do you know?: Under Reversed text (reversed50000.txt), bubble sort should use more time than selection sort because it has to reverse everytime. While selection sort already got the largest number on the first entry.
+
+sort2 uses: Merge Sort
+
+How do you know?: It has exponentially faster runtime on random text (I used random50000.txt).
+
+sort3 uses: Selection Sort
+
+How do you know?: It is the last determined sorting method, since every method has to appear once it is selection sort through elimination.
+
